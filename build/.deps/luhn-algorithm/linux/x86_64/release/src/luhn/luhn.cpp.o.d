@@ -1,4 +1,6 @@
 {
+    depfiles_gcc = "luhn.o: src/luhn/luhn.cpp src/luhn/luhn.hpp\
+",
     values = {
         "/usr/bin/gcc",
         {
@@ -9,8 +11,6 @@
             "-DNDEBUG"
         }
     },
-    depfiles_gcc = "luhn.o: src/luhn/luhn.cpp src/luhn/luhn.hpp\
-",
     files = {
         "src/luhn/luhn.cpp"
     }
