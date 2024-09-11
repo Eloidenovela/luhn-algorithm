@@ -2,8 +2,9 @@
 
 namespace card {
 
-    std::string type_is(long long card_number, int digits) {
+    std::string type_is(long long card_number) {
         long long int start_digits = 0;
+        int digits = util::len(card_number);
 
         for (int i = 1 ; i <= digits - 2 ; i++) {
             start_digits = card_number / 10;
@@ -21,5 +22,16 @@ namespace card {
         }
 
         return "unknown card";
+    }
+}
+
+namespace util {
+    int len(long long number) {
+        int digits = 0;
+        while (number != 0) {
+            number = number / 10;
+            digits++;
+        }
+        return  digits;
     }
 }

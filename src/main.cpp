@@ -9,8 +9,8 @@ int main() {
     std::cout << "Enter a card number: ";
     std::cin >> card_number;
 
-    if (luhn::checker(card_number, digits)) {
-        std::cout << card::type_is(card_number, digits) << std::endl;
+    if (luhn::checker(card_number)) {
+        std::cout << card::type_is(card_number) << std::endl;
         return 0;
     } 
 

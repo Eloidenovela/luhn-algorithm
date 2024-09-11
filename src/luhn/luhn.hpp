@@ -2,6 +2,6 @@
 
 namespace luhn {
 
-    bool checker(long long, int&);
+    bool checker(long long);
 
 }

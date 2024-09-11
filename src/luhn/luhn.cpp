@@ -1,14 +1,15 @@
 #include "luhn.hpp"
+#include "../util/util.hpp"
 
 namespace luhn {
 
-    bool checker(long long card_number, int & digits) {
-        short int right_digits = 0, left_digits = 0, check_sum = 0;
+    bool checker(long long card_number) {
+        auto right_digits = 0, left_digits = 0, check_sum = 0;
+        auto len = util::len(card_number);
 
-        while (card_number != 0) {
-            digits++;
+        for (int digit = 1; digit <= len; digit++) {
 
-            if (digits % 2 != 0) {
+            if (digit % 2 == 0) {
                 left_digits += card_number % 10;
             } else {
                 if ((2 * (card_number % 10)) > 9) {
@@ -20,8 +21,6 @@ namespace luhn {
 
             card_number = card_number / 10;
         }
-
-        check_sum = left_digits + right_digits;
 
         return (check_sum % 10 == 0);
     }
