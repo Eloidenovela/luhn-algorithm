@@ -1,6 +1,6 @@
 #include <iostream>
-#include "util/util.hpp"
 #include "luhn/luhn.hpp"
+#include "util/card.hpp"
 
 int main() {
     long long int card_number;
