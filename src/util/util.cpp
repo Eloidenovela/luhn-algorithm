@@ -1,6 +1,7 @@
 #include "util.hpp"
 
-namespace util {
+namespace util 
+{
     int len(long long number) {
         int digits = 0;
         while (number != 0) {

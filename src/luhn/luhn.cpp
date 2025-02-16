@@ -1,11 +1,11 @@
 #include "luhn.hpp"
 #include "../util/util.hpp"
 
-namespace luhn {
-
-    bool checker(long long card_number) {
-        auto right_digits = 0, left_digits = 0, check_sum = 0;
-        auto len = util::len(card_number);
+namespace luhn 
+{
+    bool is_valide(long long card_number) {
+        int right_digits = 0, left_digits = 0, check_sum = 0;
+        int len = util::len(card_number);
 
         for (int digit = 1; digit <= len; digit++) {
 

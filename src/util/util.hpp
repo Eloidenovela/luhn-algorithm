@@ -1,5 +1,6 @@
 #pragma once
 
-namespace util {
+namespace util 
+{
     int len(long long int);
 }
