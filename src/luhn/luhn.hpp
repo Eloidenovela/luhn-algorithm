@@ -2,5 +2,5 @@
 
 namespace luhn 
 {
-    bool is_valide(long long);
+    bool is_valid(long long);
 }

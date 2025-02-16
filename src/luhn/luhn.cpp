@@ -3,7 +3,7 @@
 
 namespace luhn 
 {
-    bool is_valide(long long card_number) {
+    bool is_valid(long long card_number) {
         int right_digits = 0, left_digits = 0, check_sum = 0;
         int len = util::len(card_number);
 
